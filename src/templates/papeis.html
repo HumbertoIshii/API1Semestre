@@ -1,0 +1,119 @@
+{% extends 'base2.html' %}
+
+<!--Título-->
+{% block title %}Papéis do Time{% endblock %}
+
+<!--Botão Sidebar-->
+
+{% block sidebar %}
+<a href="#intro" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-people-group fa-fw me-2"></i></i><span>Papéis do grupo</span></a>
+<a href="#master" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-user fa-fw me-2"></i><span>Scrum Master</span></a>
+<a href="#PO" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-shopping-bag fa-fw me-2"></i><span>Product Owner</span></a>
+<a href="#devteam" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-users fa-fw me-2"></i><span>Dev Team</span></a>
+<a href="#exercicios" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-check fa-fw me-2"></i><span>Exercícios</span></a>
+{% endblock %}
+
+<!--Conteúdo-->
+{% block content %}
+<!-- Introdução -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main bg-gray" style="margin-top: 40px;" id="intro">
+    <div class="col-lg-5 mt-5">
+        <h2 class="font-weight-light">Papéis do grupo</h2>
+        <p>
+            Em um time, cada membro tem um papel específico que contribui para o sucesso do projeto. Esses papéis podem variar dependendo da natureza do projeto e da metodologia utilizada. Entender os papéis e responsabilidades contribui para otimizar as competências e habilidades de cada pessoa, estimular o desenvolvimento de uma marca pessoal, identificar lacunas que precisam ser trabalhadas, tomar decisões mais acertadas e promover a união e coesão entre o grupo.
+        </p>
+        <p>Na metodologia Scrum, existem três papéis principais:</p>
+        <ul>
+            <li>Scrum Master</li>
+            <li>Product Owner</li>
+            <li>Development Team</li>
+        </ul>
+        <p>
+            Esses três papéis trabalham juntos em um ciclo de <a href="#" data-toggle="tooltip" title="Processo constante de comunicação e avaliação ao longo do desenvolvimento. Essencial no Scrum para melhorar o produto e os processos da equipe, obtido em reuniões como Sprint Review e Daily Scrum.">feedback contínuo</a> para melhorar o produto. Cada papel tem suas responsabilidades e competências específicas, e todos trabalham juntos para garantir que o produto seja entregue de acordo com as expectativas e no prazo estabelecido.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded pb-4 mb-lg-0" src="/static/images/papeisdogrupo.png" alt="..." /></div>
+</div>
+
+<!-- Master -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="master">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Master (Scrum Master)</h3>
+        <p>
+            O Scrum Master é o guardião do processo Scrum. Ele é responsável por garantir que a equipe siga as regras e práticas do Scrum. Sua função é facilitar a comunicação, resolver impedimentos que a equipe possa enfrentar e proteger a equipe de distrações externas. O Master não é o líder da equipe (pois as equipes Scrum são auto-organizadas), mas sim um facilitador.
+        </p>
+        <p>
+            Em um projeto de desenvolvimento de software, o Scrum Master pode ajudar a equipe a resolver problemas técnicos, como falhas de integração ou problemas de desempenho.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/master.png" alt="..." /></div>
+</div>
+
+
+<!-- P.O. -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="PO">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">P.O. (Product Owner)</h3>
+        <p>
+            O Product Owner é o representante dos <a href="#" data-toggle="tooltip" title="Pessoas ou grupos interessados ou diretamente envolvidos no projeto, como clientes, usuários finais, equipe e gerentes. O Product Owner interage com os stakeholders para alinhar o desenvolvimento às suas necessidades.">stakeholders</a> no projeto e é responsável por maximizar o valor do produto. Ele mantém e prioriza o backlog do produto, garantindo que o trabalho realizado pela equipe esteja alinhado com as necessidades e objetivos do negócio. O P.O. deve ter uma visão clara do produto e ser capaz de comunicar essa visão para a equipe.
+        </p>
+        <p>
+            Em um projeto de desenvolvimento de um aplicativo de comércio eletrônico, o Product Owner pode priorizar a implementação de um recurso de recomendação de produtos com base no comportamento de compra do usuário, pois isso pode aumentar as vendas e melhorar a experiência do usuário.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/PO.png" alt="..." /></div>
+</div>
+
+<!-- Dev Team -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="devteam">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Dev Team (Development Team)</h3>
+        <p>
+            O Dev team é composto pelos profissionais que executam o trabalho de entregar incrementos potencialmente liberáveis do produto ao final de cada Sprint. Eles são auto-organizadas e interdisciplinares, o que significa que elas têm autonomia para decidir como fazer o trabalho e possuem todas as competências necessárias para realizar o trabalho sem depender de outras pessoas que não fazem parte da equipe.
+        </p>
+        <p>
+            Em um projeto de desenvolvimento de um site, a equipe Scrum pode incluir desenvolvedores front-end e back-end, designers de UI/UX e testadores de qualidade. Eles colaborariam para planejar, projetar, desenvolver e testar o site, com cada membro contribuindo com suas habilidades e experiências únicas.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/devteam.png" alt="..." /></div>
+</div>
+
+<!-- Quiz -->
+<div class="container-fluid main col-lg-10" id="exercicios">
+    <div class="text-center">
+        <h3>Teste seu Conhecimento</h3>
+    </div>
+
+    <form action="/submitPapeis" method="post">
+        {% for question in questionsP %}
+        <div class="card mb-1">
+            <div class="card-header bg-blue text-white">
+                <span>{{ question.question }}</span>
+            </div>
+            <div class="card-body">
+                {% for option in question.options %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.question }}" id="{{ option }}" value="{{ option }}" required>
+                    <label class="form-check-label" for="{{ option }}">{{ option }}</label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Conferir</button>
+        </div>
+    </form>
+    <div class="text-center mt-3">
+        <h3>Resultado</h3>
+        <p>Sua nota é: {{ score }} / {{ total }}</p>
+    </div>
+</div>
+
+{% if scroll %}
+<script>
+    document.location.hash = '#' + '{{ scroll }}';
+</script>
+{% endif %}
+
+{% endblock %}

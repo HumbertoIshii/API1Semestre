@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Comentários{% endblock %}
+
+{% block content %}
+
+<!-- Comentários -->
+<div class="container-fluid comment-block">
+    <center>
+        <form action="/add" method="POST" class="form-block mb-5 col-md-6">
+            <h3 class="text-center">Comentários</h3>
+            <div class="row">
+                <div class="col-xs-12">									
+                    <div class="form-group">
+                        <textarea name="conteudo" class="form-input" required placeholder="Seu Comentário" maxlength="255"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            {% if session['loggedin'] == True %}
+            <button class="btn btn-primary" type="submit" style="float: right;">Enviar Comentário</button>
+            {% else %}
+            <button class="btn btn-secondary" type="submit" style="float: right;" disabled>Enviar Comentário</button>
+            {% endif %}
+        </form>
+    </center>
+    
+    <div class="d-flex justify-content-center row mb-3">
+        {% for comment in comment %}
+        <div class="d-flex flex-column col-md-8 mb-1">
+            <div class="card p-2 px-4">
+                <div class="mt-1">
+                    <div class="d-flex justify-content-between">
+                        <h5 class="mr-2">{{ comment[0] }}</h5>
+                        <span class="mb-1 pl-2 comment-time"><i class="fa fa-clock me-2"></i>{{ comment[2] }}</span>
+                    </div>
+                    <div>
+                        <span>
+                            {{ comment[1] }}
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

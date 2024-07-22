@@ -1,0 +1,113 @@
+{% extends 'base2.html' %}
+
+<!--Título-->
+{% block title %}Introdução{% endblock %}
+
+<!--Botão Sidebar-->
+
+{% block sidebar %}
+<a href="#" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-star fa-fw me-2"></i></i><span>Introdução</span></a>
+<a href="#porque" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-question fa-fw me-2"></i><span>Por que usar Scrum?</span></a>
+<a href="#pilar" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-landmark fa-fw me-2"></i><span>Pilares do Scrum</span></a>
+<a href="#agil" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-jet-fighter fa-fw me-2"></i><span>Metodologia Ágil</span></a>
+<a href="#exercicios" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-check fa-fw me-2"></i><span>Exercícios</span></a>
+{% endblock %}
+
+<!--Conteúdo-->
+{% block content %}
+<!-- Introdução -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main bg-gray" style="margin-top: 40px;">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Introdução</h2>
+        <p>
+            De forma simplificada, o Scrum é um <a href="#" data-toggle="tooltip" title="Conjunto de conceitos e práticas para resolver problemas específicos, servindo como estrutura de suporte. No Scrum, guia equipes na gestão ágil de projetos.">framework</a>, uma metodologia de trabalho que foi feita para auxiliar times a resolverem problemas simples ou complexos de forma fácil de se entender e ágil, aumentando a produtividade e qualidade do produto por conta de seus processos. O Scrum é fácil de se entender e aplicar, e nosso objetivo é provar isso por meio desse site, mostrando todos os seus processos e elementos de forma simples, mas primeiro nesse capítulo explicaremos o porquê de usar Scrum.  
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded pb-4 mb-lg-0" src="/static/images/Ferramentas1.png" alt="..." /></div>
+</div>
+
+<!-- O porquê de usar Scrum -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="porque">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Por que usar Scrum?</h3>
+        <p>
+        O uso do Scrum é altamente recomendado em diversos projetos pois tem o foco de ser simples, não requisitando diversas etapas complexas que possam atrapalhar a equipe, e ser ágil, fácil em encontrar e resolver problemas, sendo assim altamente preciso e entregando produtos de melhor qualidade no fim de seus processos.         
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/porque.png" alt="..." /></div>
+</div>
+
+<!-- Pilares do Scrum -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="pilar">
+    <div class="col-lg-5">
+        
+        <h2 class="font-weight-light">Pilares do Scrum</h3>
+        <p>
+            O Scrum tem 3 Pilares: Transparência, Inspeção e Adaptação. 
+
+Transparência: Dentro de um projeto que utiliza o Scrum é essencial a transparência entre todos os envolvidos, deixando claro os processos, desafios e progresso realizado. Essa sintonia é necessária para que tudo planejado seja alcançado e para que todos estejam cientes do andamento geral do que é feito. 
+
+Inspeção: Inspeção se trata no controle e supervisão sobre os processos para a detecção de possíveis problemas e a garantia da qualidade do produto. 
+
+Adaptação: Caso haja problemas, a adaptação é necessária para resolvê-los da forma mais eficaz possível. Durante os processos do projeto, o Scrum apresenta várias formas de analisar as necessidades de uma adaptação, como: Sprint Planning Meeting, Daily, Scrum, Sprint Review e Sprint Retrospective. 
+        </p>
+    </div>
+    <div class="col-lg-5">
+        <div class="video_wrapper">
+        <iframe
+            src="https://www.youtube.com/embed/Tmjlf-o9WB0?si=FUhrYb0WhRjcVaFe">
+        </iframe>
+        </div>
+    </div>
+</div>
+
+<!-- Metodologia Ágil -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="agil">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Metodologia Ágil</h3>
+        <p>
+        Inserir vídeo aqui. 
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/agil.png" alt="..." /></div>
+</div>
+
+<!-- Quiz -->
+<div class="container-fluid main col-lg-10" id="exercicios">
+    <div class="text-center">
+        <h3>Teste seu Conhecimento</h3>
+    </div>
+
+    <form action="/submitIntroducao" method="post">
+        {% for question in questionsI %}
+        <div class="card mb-1">
+            <div class="card-header bg-blue text-white">
+                <span>{{ question.question }}</span>
+            </div>
+            <div class="card-body">
+                {% for option in question.options %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.question }}" id="{{ option }}" value="{{ option }}" required>
+                    <label class="form-check-label" for="{{ option }}">{{ option }}</label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Conferir</button>
+        </div>
+    </form>
+    <div class="text-center mt-3">
+        <h3>Resultado</h3>
+        <p>Sua nota é: {{ score }} / {{ total }}</p>
+    </div>
+</div>
+
+{% if scroll %}
+<script>
+    document.location.hash = '#' + '{{ scroll }}';
+</script>
+{% endif %}
+
+{% endblock %}

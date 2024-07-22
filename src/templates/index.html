@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Aprenda Scrum -->
+<div class="bg-lightgray">
+  <div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid">
+    <div class="col-lg-5">
+        <h1 class="font-weight-light">Aprenda Scrum</h1>
+        <h2>Conheça mais sobre essa metodologia.</h2>
+    </div>
+    <!-- caminho da imagem da seção "Aprenda Scrum" -->
+    <div class="col-lg-5">
+      <img class="img-fluid mb-4 mb-lg-0 text-center" src="/static/images/scrum.png" alt="..." />
+    </div>
+  </div>
+</div>
+
+<!-- O que é Scrum? -->
+<div>
+  <div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Aprenda sobre essa metodologia</h2>
+        <p>
+          O Scrum é uma metodologia ágil amplamente adotada para a gestão de projetos e desenvolvimento de produtos, especialmente no setor de tecnologia. Este framework é projetado para promover a colaboração, eficiência e entrega contínua de valor em equipes de qualquer tamanho.
+        </p>
+        <a href="/introducao" class="btn btn-primary text-white">Iniciar</a>
+    </div>
+    <!-- caminho da imagem da seção "O que é Scrum?" -->
+    <div class="col-lg-5">
+      <img class="img-fluid mb-4 mb-lg-0 text-center" src="/static/images/oqueescrum.png" alt="..." />
+    </div>
+  </div>
+</div>
+
+<!-- Papéis de um time -->
+<div class="bg-lightgray">
+  <div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid">
+      <div class="col-lg-5 py-4">
+          <h3 class="font-weight-light text-center">Papéis de um time</h3>
+          <h5 class="font-weight-light text-center">Aprenda mais sobre os integrantes de um time SCRUM</h5>
+              <div class="btn-group-vertical container-fluid mt-3">
+                  <a href="/papeis#master" type="button" class="btn rounded-pill btn-primary text-white">Scrum Master</a>
+                  <a href="/papeis#PO" type="button" class="btn rounded-pill my-1 btn-primary text-white">Product Owner</a>
+                  <a href="/papeis#devteam" type="button" class="btn rounded-pill btn-primary text-white">Dev Team</a>
+              </div>
+      </div>
+      <!-- caminho da imagem da seção "Papéis de um time" -->
+      <div class="col-lg-5"><img class="img-fluid mb-4 mb-lg-0 text-center" src="/static/images/papeisdeumtime.png" alt="..." /></div>
+  </div>
+</div>
+
+<!-- Eventos do SCRUM -->
+<div>
+  <div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid">
+      <div class="col-lg-5 py-4">
+          <h3 class="font-weight-light text-center">Eventos do Scrum</h3>
+          <h5 class="font-weight-light text-center">Aprenda sobre os eventos do SCRUM</h5>
+              <div class="btn-group-vertical container-fluid mt-3">
+                  <a href="/eventos#sprint" type="button" class="btn rounded-pill btn-primary text-white">Sprint</a>
+                  <a href="/eventos#plan" type="button" class="btn rounded-pill my-1 btn-primary text-white">Sprint Planning</a>
+                  <a href="/eventos#daily" type="button" class="btn rounded-pill btn-primary text-white">Daily Scrum</a>
+                  <a href="/eventos#review" type="button" class="btn rounded-pill my-1 btn-primary text-white">Sprint Review</a>
+                  <a href="/eventos#retro" type="button" class="btn rounded-pill btn-primary text-white">Sprint Retrospective</a>
+              </div>
+      </div>
+      <!-- caminho da imagem da seção "Eventos do scrum" -->
+      <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0 text-center" src="/static/images/eventosdoscrum.png" alt="..." /></div>
+  </div>
+</div>
+
+<!-- Ferramentas e Artefatos -->
+<div class="bg-lightgray">
+  <div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid">
+      <div class="col-lg-5 py-4">
+          <h3 class="font-weight-light text-center">Ferramentas e Artefatos</h3>
+          <h5 class="font-weight-light text-center">Aprenda sobre as ferramentas e artefatos</h5>
+              <div class="btn-group-vertical container-fluid mt-3">
+                  <a href="/ferramentas#backlogP" type="button" class="btn rounded-pill btn-primary text-white">Product backlog</a>
+                  <a href="/ferramentas#backlogS" type="button" class="btn rounded-pill my-1 btn-primary text-white">Sprint Backlog</a>
+                  <a href="/ferramentas#US" type="button" class="btn rounded-pill btn-primary text-white">User Stories</a>
+                  <a href="/ferramentas#poker" type="button" class="btn rounded-pill my-1 btn-primary text-white">Planning Poker</a>
+                  <a href="/ferramentas#burndown" type="button" class="btn rounded-pill btn-primary text-white">Burndown Chart</a>
+              </div>
+      </div>
+      <!-- caminho da imagem da seção "Ferramentas e Artefatos" -->
+      <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0 text-center" src="/static/images/artefatosdoscrum.png" alt="..." /></div>
+  </div>
+</div>
+{% endblock %}

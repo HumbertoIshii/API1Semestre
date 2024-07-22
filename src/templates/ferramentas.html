@@ -1,0 +1,126 @@
+{% extends 'base2.html' %}
+
+<!--Título-->
+{% block title %}Ferramentas e Artefatos{% endblock %}
+
+<!--Botão Sidebar-->
+
+{% block sidebar %}
+<a href="#" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-pen fa-fw me-2"></i></i><span>Ferramentas e Artefatos</span></a>
+<a href="#backlogP" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-handshake fa-fw me-2"></i><span>Product Backlog</span></a>
+<a href="#backlogS" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-list fa-fw me-2"></i><span>Sprint Backlog</span></a>
+<a href="#US" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-user-check fa-fw me-2"></i><span>User Stories</span></a>
+<a href="#poker" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-dice fa-fw me-2"></i><span>Planning Poker</span></a>
+<a href="#burndown" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-chart-line fa-fw me-2"></i><span>Burndown Chart</span></a>
+<a href="#exercicios" class="list-group-item list-group-item-action bg-lightgray"><i class="fas fa-check fa-fw me-2"></i><span>Exercícios</span></a>
+{% endblock %}
+
+<!--Conteúdo-->
+{% block content %}
+<!-- Introdução -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main bg-gray" style="margin-top: 40px;">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Ferramentas e Artefatos</h2>
+        <p>
+            No desenvolvimento ágil, diversas ferramentas e artefatos são utilizados para garantir a eficiência e a transparência do processo. Esses elementos ajudam a equipe a manter o foco nas metas do projeto e a melhorar continuamente suas práticas.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded pb-4 mb-lg-0" src="/static/images/Ferramentas1.png" alt="..." /></div>
+</div>
+
+<!--Product Backlog-->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="backlogP">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Product Backlog</h3>
+        <p>
+            O Product Backlog é uma lista dinâmica de tudo o que é necessário no produto. Gerido pelo Product Owner, ele contém tarefas, melhorias e requisitos detalhados. A prioridade das tarefas é ajustada constantemente, com os itens mais importantes sendo priorizados para os próximos sprints. Isso permite que a equipe se adapte rapidamente às mudanças e mantenha o produto alinhado com as necessidades do cliente.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/productbacklog.png" alt="..." /></div>
+</div>
+
+
+<!-- Sprint Backlog -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="backlogS">
+    <div class="col-lg-10">
+        
+        <h2 class="font-weight-light">Sprint Backlog</h3>
+        <p>
+            O Sprint Backlog é um subconjunto do Product Backlog, selecionado pela equipe de desenvolvimento para ser completado durante um sprint específico. Ele inclui todas as tarefas necessárias para transformar os itens do Product Backlog em incrementos de funcionalidade. Este backlog é atualizado diariamente e ajuda a equipe a monitorar o progresso e ajustar o trabalho conforme necessário.
+        </p>
+    </div>
+    <div class="col-lg-5"></div>
+</div>
+
+<!-- User Stories -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="US">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">User Stories</h3>
+        <p>
+            As User Stories são descrições breves e simples de uma funcionalidade do ponto de vista do usuário final. Cada user story deve ser pequena o suficiente para ser completada dentro de um sprint. Elas são escritas de forma que qualquer membro da equipe possa entender e implementar. As user stories ajudam a garantir que todos os membros da equipe compreendam o que está sendo solicitado e porque é importante para o usuário.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/userstory.png" alt="..." /></div>
+</div>
+
+<!-- Planning Poker -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="poker">
+    <div class="col-lg-5">
+        <h2 class="font-weight-light">Planning Poker</h3>
+        <p>
+            O Planning Poker é uma técnica de estimativa usada para determinar o esforço relativo de cada item no Product Backlog. Durante uma sessão de Planning Poker, cada membro da equipe atribui uma estimativa a cada item, usando um baralho de cartas com valores numéricos. Após discutir as diferenças nas estimativas, a equipe chega a um consenso. Este método promove a participação ativa de todos e ajuda a identificar potenciais desafios antecipadamente.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded mb-4 mb-lg-0" src="/static/images/planningpoker.png" alt="..." /></div>
+</div>
+
+<!-- Burndown -->
+<div class="row gx-4 gx-lg-5 align-items-center justify-content-center py-3 container-fluid main" id="burndown">
+    <div class="col-lg-10">
+        <h2 class="font-weight-light">Burndown Chart</h3>
+        <p>
+            O Burndown Chart é uma ferramenta visual que mostra a quantidade de trabalho restante em um sprint. O gráfico é atualizado diariamente e permite à equipe e ao Product Owner monitorar o progresso em direção à meta do sprint. Um Burndown Chart efetivo pode destacar rapidamente quaisquer desvios do plano e permitir ajustes rápidos para manter o sprint no caminho certo.
+        </p>
+    </div>
+    <div class="col-lg-5"><img class="img-fluid rounded pb-4 mb-lg-0" src="/static/images/burndown.png" alt="..." /></div>
+</div>
+
+<!-- Quiz -->
+<div class="container-fluid main col-lg-10" id="exercicios">
+    <div class="text-center">
+        <h3>Teste seu Conhecimento</h3>
+    </div>
+
+    <form action="/submitFerramentas" method="post">
+        {% for question in questionsF %}
+        <div class="card mb-1">
+            <div class="card-header bg-blue text-white">
+                <span>{{ question.question }}</span>
+            </div>
+            <div class="card-body">
+                {% for option in question.options %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ question.question }}" id="{{ option }}" value="{{ option }}" required>
+                    <label class="form-check-label" for="{{ option }}">{{ option }}</label>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+        <div class="text-center mt-3">
+            <button type="submit" class="btn btn-primary">Conferir</button>
+        </div>
+    </form>
+    <div class="text-center mt-3">
+        <h3>Resultado</h3>
+        <p>Sua nota é: {{ score }} / {{ total }}</p>
+    </div>
+</div>
+
+{% if scroll %}
+<script>
+    document.location.hash = '#' + '{{ scroll }}';
+</script>
+{% endif %}
+
+{% endblock %}
